@@ -20,7 +20,7 @@ const Header = props => (
           >
             software
           </a>
-          . That software is imbued with a set of{' '}
+          .<br /> That software is imbued with a set of{' '}
           <a
             href="javascript:;"
             onClick={() => {
@@ -29,7 +29,7 @@ const Header = props => (
           >
             values
           </a>
-          . Our{' '}
+          .<br /> Our{' '}
           <a
             href="javascript:;"
             onClick={() => {
@@ -38,7 +38,8 @@ const Header = props => (
           >
             business model
           </a>
-          is generosity. We are seeking{' '}
+          is generosity.
+          <br /> We are open to{' '}
           <a
             href="javascript:;"
             onClick={() => {
