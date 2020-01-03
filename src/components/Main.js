@@ -28,29 +28,44 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Intro</h2>
+          <h2 className="major">Software</h2>
           <span className="image main">
             <img src={pic01} alt="" />
           </span>
           <p>
-            Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-            aliquam facilisis ante interdum congue. Integer mollis, nisl amet
-            convallis, porttitor magna ullamcorper, amet egestas mauris. Ut
-            magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.
-            By the way, check out my <a href="#work">awesome work</a>.
+            We build software focused on human communication, coordination and
+            orchestration. We take inspiration from tools like{' '}
+            <a href="https://signal.org" target="_blank">
+              Signal
+            </a>
+            ,{' '}
+            <a href="https://keybase.io" target="_blank">
+              Keybase
+            </a>
+            ,{' '}
+            <a href="https://matrix.org" target="_blank">
+              Matrix
+            </a>{' '}
+            in the space of tools like{' '}
+            <a href="https://www.loomio.org" taget="_blank">
+              Loomio
+            </a>
+            ,{' '}
+            <a
+              href="https://github.com/theborderland/borderland-dreams/network/members"
+              target="_blank"
+            >
+              Dreams
+            </a>{' '}
+            and{' '}
+            <a href="https://www.splitwise.com" target="_blank">
+              SplitWise
+            </a>
+            .
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos. Etiam tristique
-            libero eu nibh porttitor fermentum. Nullam venenatis erat id
-            vehicula viverra. Nunc ultrices eros ut ultricies condimentum.
-            Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae
-            dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in
-            lectus. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. In non lorem sit amet elit
-            placerat maximus. Pellentesque aliquam maximus risus, vel sed
-            vehicula.
+            Our first product is rethink of what an address book would look like
+            in the 21st century.
           </p>
           {close}
         </article>
@@ -62,25 +77,36 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">Work</h2>
+          <h2 className="major">Values</h2>
           <span className="image main">
             <img src={pic02} alt="" />
           </span>
           <p>
-            Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu,
-            at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent
-            urna nisi, fringila lorem et vehicula lacinia quam. Integer
-            sollicitudin mauris nec lorem luctus ultrices.
+            Our company and our software is imbued with a set of values. We seek
+            to balance profit incentives with restraint and a focus on the
+            common good. These values are:
           </p>
-          <p>
-            Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
-            Pellentesque condimentum sem. In efficitur ligula tate urna.
-            Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
-            Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-            libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-            tempus.
-          </p>
+          <ul>
+            <li>
+              Sovereignty
+              <ul>
+                <li>Rhizome</li>
+              </ul>
+            </li>
+            <li>
+              Cooperation
+              <ul>
+                <li>Win win games</li>
+              </ul>
+            </li>
+            <li>
+              Privacy
+              <ul>
+                <li>Transparency</li>
+                <li>Censorship resistance</li>
+              </ul>
+            </li>
+          </ul>
           {close}
         </article>
 
@@ -91,18 +117,34 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">About</h2>
+          <h2 className="major">Business model</h2>
           <span className="image main">
             <img src={pic03} alt="" />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
-            eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam
-            erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-            lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
-            Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.
-            Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit
-            amet.
+            These values raise a key challenge. How to earn profit while
+            building open, peer to peer software? Our approach is generosity. We
+            believe people will crowdfund our software, and will choose to tip
+            us for software they love.
+          </p>
+          <p>
+            The unit economics of p2p are truly zero marginal cost. By focusing
+            on mass market software, we believe that generosity can be a viable
+            model.
+          </p>
+          <p>
+            We are a{' '}
+            <a href="https://purpose-economy.org/en/" target="_blank">
+              Purpose
+            </a>{' '}
+            (or{' '}
+            <a
+              href="https://steward-ownership.com/ownership-overview-page/"
+              target="_blank"
+            >
+              steward ownership
+            </a>
+            ) company.
           </p>
           {close}
         </article>
