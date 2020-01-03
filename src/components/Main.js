@@ -29,9 +29,6 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Software</h2>
-          <span className="image main">
-            <img src={pic01} alt="" />
-          </span>
           <p>
             We build software focused on human communication, coordination and
             orchestration. We take inspiration from tools like{' '}
@@ -78,9 +75,6 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Values</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
           <p>
             Our company and our software is imbued with a set of values. We seek
             to balance profit incentives with restraint and a focus on the
@@ -118,9 +112,6 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">Business model</h2>
-          <span className="image main">
-            <img src={pic03} alt="" />
-          </span>
           <p>
             These values raise a key challenge. How to earn profit while
             building open, peer to peer software? Our approach is generosity. We
