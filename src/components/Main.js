@@ -148,14 +148,29 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <p>
-            Purpose companies offer investments with capped returns. We seek to
-            balance profit maximisation with the common good. We're initially
-            taking €20k investments with a max 4x return.
+            Generous seeks to accept investments. In line with our{' '}
+            <a
+              href="https://medium.com/bettersharing/steward-ownership-is-capitalism-2-0-76a1c50a6d88"
+              target="_blank"
+            >
+              steward ownership
+            </a>{' '}
+            model. Inspired by{' '}
+            <a href="https://slicingpie.com" target="_blank">
+              slicing pie
+            </a>
+            .
           </p>
           <p>
-            We plan to use a cryptographically signed ledger to track
-            investments and payouts. We also intend to practice strong
-            transparency with all company finances.
+            Investments can take the form of human time or cash. Human time
+            earns a 2x multiple and cash earns a 4x multiple. Investments are
+            grouped into rounds. We pay out earlier rounds first. In the first
+            round we're taking a maximum of 10 €20k investments with a max 4x
+            return.
+          </p>
+          <p>
+            We'll use a cryptographically signed ledger to track investments.
+            We're also committed to financial transparency.
           </p>
           {close}
         </article>
