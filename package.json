@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-dimension-v2",
-  "description": "Gatsby Starter - Dimension V2",
+  "description": "Generous Labs",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Generous Labs",
   "dependencies": {
     "gatsby": "^2.15.28",
     "gatsby-plugin-manifest": "^2.2.20",
