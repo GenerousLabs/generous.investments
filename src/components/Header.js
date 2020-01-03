@@ -8,9 +8,49 @@ const Header = props => (
     </div>
     <div className="content">
       <div className="inner">
-        <h1>Dimension</h1>
+        <h1>Genrous</h1>
+        <p>GeneroUS is a slightly different type of company.</p>
         <p>
-          A fully responsive site template designed by{' '}
+          We build
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('software')
+            }}
+          >
+            software
+          </a>
+          . That software is imbued with a set of
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('values')
+            }}
+          >
+            values
+          </a>
+          . Our
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('businessmodel')
+            }}
+          >
+            business model
+          </a>
+          is generosity. We are seeking
+          <a
+            href="javascript:;"
+            onClick={() => {
+              props.onOpenArticle('investment')
+            }}
+          >
+            investment
+          </a>
+          .
+        </p>
+        <p>
+          V A fully responsive site template designed by{' '}
           <a href="https://html5up.net">HTML5 UP</a> and released
           <br />
           for free under the{' '}
@@ -24,40 +64,40 @@ const Header = props => (
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('intro')
+              props.onOpenArticle('software')
             }}
           >
-            Intro
+            Software
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('work')
+              props.onOpenArticle('values')
             }}
           >
-            Work
+            Values
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('about')
+              props.onOpenArticle('businessmodel')
             }}
           >
-            About
+            Business Model
           </a>
         </li>
         <li>
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle('contact')
+              props.onOpenArticle('investment')
             }}
           >
-            Contact
+            Investment
           </a>
         </li>
       </ul>

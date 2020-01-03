@@ -22,8 +22,8 @@ class Main extends React.Component {
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+          id="software"
+          className={`${this.props.article === 'software' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
@@ -71,8 +71,8 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="work"
-          className={`${this.props.article === 'work' ? 'active' : ''} ${
+          id="values"
+          className={`${this.props.article === 'values' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
@@ -111,10 +111,10 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${
-            this.props.articleTimeout ? 'timeout' : ''
-          }`}
+          id="businessmodel"
+          className={`${
+            this.props.article === 'businessmodel' ? 'active' : ''
+          } ${this.props.articleTimeout ? 'timeout' : ''}`}
           style={{ display: 'none' }}
         >
           <h2 className="major">Business model</h2>
@@ -150,8 +150,8 @@ class Main extends React.Component {
         </article>
 
         <article
-          id="contact"
-          className={`${this.props.article === 'contact' ? 'active' : ''} ${
+          id="investment"
+          className={`${this.props.article === 'investment' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
