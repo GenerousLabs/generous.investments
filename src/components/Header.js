@@ -37,7 +37,7 @@ const Header = props => (
             }}
           >
             business model
-          </a>
+          </a>{' '}
           is generosity.
           <br /> We are open to{' '}
           <a
