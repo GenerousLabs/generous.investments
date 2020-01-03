@@ -11,7 +11,7 @@ const Header = props => (
         <h1>Genrous</h1>
         <p>GeneroUS is a slightly different type of company.</p>
         <p>
-          We build
+          We build{' '}
           <a
             href="javascript:;"
             onClick={() => {
@@ -20,7 +20,7 @@ const Header = props => (
           >
             software
           </a>
-          . That software is imbued with a set of
+          . That software is imbued with a set of{' '}
           <a
             href="javascript:;"
             onClick={() => {
@@ -29,7 +29,7 @@ const Header = props => (
           >
             values
           </a>
-          . Our
+          . Our{' '}
           <a
             href="javascript:;"
             onClick={() => {
@@ -38,7 +38,7 @@ const Header = props => (
           >
             business model
           </a>
-          is generosity. We are seeking
+          is generosity. We are seeking{' '}
           <a
             href="javascript:;"
             onClick={() => {
