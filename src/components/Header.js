@@ -8,7 +8,7 @@ const Header = props => (
     </div>
     <div className="content">
       <div className="inner">
-        <h1>Genrous</h1>
+        <h1>Generous</h1>
         <p>GeneroUS is a slightly different type of company.</p>
         <p>
           We build{' '}
