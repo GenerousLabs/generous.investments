@@ -11,11 +11,11 @@ type Props = {
 };
 
 const BlogPostList = ({ classes }: Props) => {
-  const { allContentfulBlogPost } = useBlogPosts();
+  const { allMarkdownRemark } = useBlogPosts();
 
   return (
     <div className={classes.container}>
-      {allContentfulBlogPost.edges.map(({ node }, index) => (
+      {allMarkdownRemark.edges.map(({ node }, index) => (
         <BlogPost key={index} data={node} />
       ))}
     </div>

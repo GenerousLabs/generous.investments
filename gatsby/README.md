@@ -25,7 +25,6 @@ These are the key features of the project:
 *  [React](https://reactjs.org/) (everything in React Hooks)
 *  [Redux](https://redux.js.org/) (custom HOF to connect actions & props)
 *  [Material UI](https://material-ui.com/) (palette, typography & breakpoints configuration)
-*  [Contentful CMS](https://www.contentful.com/) (blog integration)
 *  [Netlify Deployment Support](https://www.netlify.com)
 *  [React Helmet](https://github.com/nfl/react-helmet)
 *  [Flow](https://flow.org/)
@@ -52,15 +51,6 @@ Install all dependencies
 ```sh
 yarn install
 ```
-
-### Contentful blog
-Setup Contentful settings
-```sh
-yarn setup
-```
-Follow the instructions in order to setup ```CONTENTFUL_SPACE_ID``` and ```CONTENTFUL_ACCESS_TOKEN```. Required settings will be defined in both ```.env.development``` and ```.env.production``` files.
-
-For more info on how to setup Contentful follow this [link](https://www.contentful.com/r/knowledgebase/gatsbyjs-and-contentful-in-five-minutes/).
 
 ### Development mode
 Start development server

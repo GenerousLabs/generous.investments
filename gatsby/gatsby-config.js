@@ -1,17 +1,34 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
+
+title = `Generous`;
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter`,
-    description: `Gatsby Starter`,
-    author: `Polychronis Papadakis`,
+    title,
+    description: `The Generous Company`,
+    author: `Generous Labs`,
   },
   plugins: [
     `gatsby-plugin-flow`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 960,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
@@ -27,18 +44,18 @@ module.exports = {
       options: {
         root: './src',
         aliases: {
-          'components': './components',
-          'containers': './containers',
-          'images': './images',
-          'state': './state',
-          'styles': './styles',
-          'utils': './utils',
+          components: './components',
+          containers: './containers',
+          images: './images',
+          state: './state',
+          styles: './styles',
+          utils: './utils',
           static: {
             root: './public',
-            alias: './static'
-          }
-        }
-      }
+            alias: './static',
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,10 +65,24 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/../content/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/../content/posts`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter`,
-        short_name: `Gatsby Starter`,
+        name: title,
+        short_name: title,
         start_url: `/`,
         background_color: `black`,
         theme_color: `black`,
@@ -62,7 +93,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-redux`,
       options: {
-        pathToCreateStoreModule: "./src/state/store",
+        pathToCreateStoreModule: './src/state/store',
         serialize: {
           space: 0,
           isJSON: true,
@@ -70,13 +101,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken:process.env.CONTENTFUL_ACCESS_TOKEN,
-        environment: process.env.CONTENTFUL_ENV,
-      }
-    },
   ],
-}
+};
