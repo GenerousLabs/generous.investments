@@ -6,5 +6,6 @@
 #    that is where we will look for package.json/.nvmrc/etc not repo root!
 
 [build]
-  publish = "gatsby/public/"
-  command = "cd gatsby && npm i && npm run build"
+  base = "gatsby"
+  publish = "public/"
+  command = "gatsby build"
