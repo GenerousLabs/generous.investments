@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Typography } from '@material-ui/core';
+import { Typography, Fade } from '@material-ui/core';
 
-import Layout from 'components/layout';
+import { Layout, Animated } from 'components';
 
 const Page = props => {
   const { data } = props;
@@ -13,7 +13,11 @@ const Page = props => {
 
   return (
     <Layout>
-      <Typography variant='h1'>{title}</Typography>
+      <Fade in timeout={1000}>
+        <Typography variant='h1' color='textPrimary'>
+          <Animated>{title}</Animated>
+        </Typography>
+      </Fade>
       <Typography
         variant='body1'
         dangerouslySetInnerHTML={{
