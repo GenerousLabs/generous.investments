@@ -1,6 +1,7 @@
 ---
 title: Investment
 path: /investment
+description: Generous investment
 ---
 
 Generous seeks to accept investments. In line with our

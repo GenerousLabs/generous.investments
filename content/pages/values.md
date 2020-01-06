@@ -1,6 +1,7 @@
 ---
 title: Values
 path: /values
+description: Generous company values
 ---
 
 Our company and our software is imbued with a set of values. We seek to balance profit incentives with restraint and a focus on the common good. These values are:

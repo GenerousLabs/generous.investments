@@ -1,6 +1,7 @@
 ---
 title: Software
 path: /software
+description: Generous software
 ---
 
 We build software focused on human communication, coordination and orchestration. We take inspiration from tools like Signal, Keybase, Matrix in the space of tools like Loomio, Dreams and SplitWise.

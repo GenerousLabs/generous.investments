@@ -2,17 +2,18 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Typography, Fade } from '@material-ui/core';
 
-import { Layout, Animated } from 'components';
+import { Layout, SEO, Animated } from 'components';
 
 const Page = props => {
   const { data } = props;
   const {
-    frontmatter: { title },
+    frontmatter: { title, description },
     html,
   } = data.markdownRemark;
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <Fade in timeout={1000}>
         <Typography variant='h1' color='textPrimary'>
           <Animated>{title}</Animated>
@@ -35,6 +36,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }

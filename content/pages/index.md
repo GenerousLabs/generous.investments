@@ -1,6 +1,7 @@
 ---
 title: Generous
 path: /
+description: GeneroUS is a slightly different type of company.
 ---
 
 GeneroUS is a slightly different type of company.

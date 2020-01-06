@@ -1,6 +1,7 @@
 ---
 title: Business Model
 path: /businessmodel
+description: The Generous Labs business model.
 ---
 
 These values raise a key challenge. How to earn profit while
