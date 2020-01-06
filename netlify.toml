@@ -7,4 +7,4 @@
 
 [build]
   publish = "gatsby/public/"
-  command = "cd gatsby && yarn && yarn run build"
+  command = "cd gatsby && npm i && npm run build"
