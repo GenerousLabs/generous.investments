@@ -12,6 +12,13 @@ const muiTheme = createMuiTheme({
   },
   palette,
   color,
+  props: {
+    MuiTypography: {
+      variantMapping: {
+        body1: 'span',
+      },
+    },
+  },
 });
 
 muiTheme.typography = merge(
