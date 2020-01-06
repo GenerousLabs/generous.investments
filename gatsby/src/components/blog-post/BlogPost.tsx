@@ -6,8 +6,8 @@ import Img from 'gatsby-image';
 import styles from './style';
 
 type Props = {
-  classes: Object,
-  data: Object,
+  classes: Object;
+  data: Object;
 };
 
 const BlogPost = ({ classes, data }: Props) => (

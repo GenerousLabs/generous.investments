@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/styles';
 import styles from './style';
 
 type Props = {
-  classes: Object,
-  links: [],
+  classes: Object;
+  links: [];
 };
 
 const LinkList = ({ classes, links }: Props) => (

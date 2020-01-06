@@ -2,17 +2,21 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import merge from 'lodash/merge';
 
 import palette from './palette';
-import typography from './typography';
+import typography, { fontFamily } from './typography';
 import color from './color';
 
-const muiTheme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-    fontFamily: typography.fontFamily,
+const muiTheme = createMuiTheme(
+  {
+    typography: {
+      useNextVariants: true,
+      fontFamily,
+    },
+    palette,
   },
-  palette,
-  color,
-});
+  {
+    color,
+  }
+);
 
 muiTheme.typography = merge(
   muiTheme.typography,

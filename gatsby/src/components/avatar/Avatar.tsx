@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/styles';
 import styles from './style';
 
 type Props = {
-  classes: Object,
+  classes: Object;
 };
 
 const Avatar = ({ classes }: Props) => (

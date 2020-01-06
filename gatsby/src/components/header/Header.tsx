@@ -7,7 +7,7 @@ import { Avatar, Navigation, Animated } from 'components';
 import styles from './style';
 
 type Props = {
-  classes: Object,
+  classes: Object;
 };
 
 const Header = ({ classes }: Props) => (

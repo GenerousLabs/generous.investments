@@ -7,10 +7,10 @@ import { useActiveAnimation } from 'components/animated/hooks';
 import styles from './style';
 
 type Props = {
-  classes: Object,
-  letter: String,
-  animation: String,
-  timeout: Number,
+  classes: Object;
+  letter: String;
+  animation: String;
+  timeout: Number;
 };
 
 const AnimatedLetter = ({

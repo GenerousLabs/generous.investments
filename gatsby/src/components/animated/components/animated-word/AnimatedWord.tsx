@@ -8,9 +8,9 @@ import { AnimatedLetter } from './components';
 import styles from './style';
 
 type Props = {
-  classes: Object,
-  word: String,
-  timeout: Number,
+  classes: Object;
+  word: String;
+  timeout: Number;
 };
 
 const AnimatedWord = ({

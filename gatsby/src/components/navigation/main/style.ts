@@ -1,4 +1,6 @@
-const styles = ({ palette, typography }) => ({
+import { makeStyles } from '@material-ui/styles';
+
+export const useStyles = makeStyles(({ palette, typography }) => ({
   menuContainer: {
     borderRadius: typography.pxToRem(4),
     display: 'inline-block',
@@ -13,6 +15,4 @@ const styles = ({ palette, typography }) => ({
   navLinkActive: {
     borderBottom: `${typography.pxToRem(2)} solid ${palette.primary.main}`,
   },
-});
-
-export default styles;
+}));

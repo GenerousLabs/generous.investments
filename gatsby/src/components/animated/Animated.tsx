@@ -8,11 +8,11 @@ import styles from './style';
 import { useActiveAnimation } from './hooks';
 
 type Props = {
-  children: HTMLElement,
-  classes: Object,
-  animateWord: Boolean,
-  animation: String,
-  timeout: Number,
+  children: HTMLElement;
+  classes: Object;
+  animateWord: Boolean;
+  animation: String;
+  timeout: Number;
 };
 
 const Animated = ({

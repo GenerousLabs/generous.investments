@@ -7,7 +7,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import styles from './style';
 
 type Props = {
-  classes: Object,
+  classes: Object;
 };
 
 const Modal = ({ classes, children, fullScreen, ...rest }: Props) => (

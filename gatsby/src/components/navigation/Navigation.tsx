@@ -10,8 +10,8 @@ import options from './content';
 import styles from './style';
 
 type Props = {
-  classes: Object,
-  width: string,
+  classes: Object;
+  width: string;
 };
 
 const Navigation = ({ classes, width }: Props) => {
@@ -32,7 +32,4 @@ const Navigation = ({ classes, width }: Props) => {
   );
 };
 
-export default compose(
-  withWidth(),
-  withStyles(styles)
-)(Navigation);
+export default compose(withWidth(), withStyles(styles))(Navigation);

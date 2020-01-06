@@ -3,10 +3,10 @@ import Helmet from 'react-helmet';
 import useSiteMetadata from './useSiteMetadata';
 
 type Props = {
-  description?: String,
-  lang?: String,
-  meta: [],
-  title: String,
+  description?: String;
+  lang?: String;
+  meta: [];
+  title: String;
 };
 
 function SEO({ description, lang, meta, title }: Props) {

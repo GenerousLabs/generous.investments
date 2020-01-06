@@ -6,10 +6,10 @@ import { FaBars } from 'react-icons/fa';
 import styles from './style';
 
 type Props = {
-  classes: Object,
-  options: [],
-  open: Boolean,
-  onClick: () => void,
+  classes: Object;
+  options: [];
+  open: Boolean;
+  onClick: () => void;
 };
 
 const MobileNavigation = ({ classes, options, onClick, open }: Props) => (
