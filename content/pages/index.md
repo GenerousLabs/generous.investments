@@ -1,8 +1,11 @@
 ---
-title: What is a page?
+title: Generous
 path: /
 ---
 
-Welcome to the site.
+GeneroUS is a slightly different type of company.
 
-This is a page.
+We build [software](/software).
+That software is imbued with a set of [values](/values).
+Our business model is [generosity](/businessmodel).
+We are open to [investment](/investment).
