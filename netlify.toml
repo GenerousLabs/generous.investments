@@ -9,3 +9,4 @@
   base = "gatsby"
   publish = "public/"
   command = "gatsby build"
+  ignore = "git rev-parse --short HEAD"
