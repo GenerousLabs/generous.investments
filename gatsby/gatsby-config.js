@@ -26,6 +26,7 @@ module.exports = {
               maxWidth: 960,
             },
           },
+          `gatsby-remark-external-links`,
         ],
       },
     },
