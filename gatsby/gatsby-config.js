@@ -102,5 +102,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-remove-serviceworker',
   ],
 };
