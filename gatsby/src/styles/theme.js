@@ -1,9 +1,10 @@
 import muiTheme from './muiTheme';
+import config from '../../config';
 
 const theme = {
   ...muiTheme,
   app: {
-    maxWidth: muiTheme.typography.pxToRem(960),
+    maxWidth: muiTheme.typography.pxToRem(config.maxWidth),
   },
 };
 

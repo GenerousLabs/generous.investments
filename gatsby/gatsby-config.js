@@ -1,3 +1,5 @@
+const config = require('./config');
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -23,7 +25,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 960,
+              maxWidth: config.maxWidth,
             },
           },
           `gatsby-remark-external-links`,
