@@ -9,4 +9,4 @@
   base = "gatsby"
   publish = "public/"
   command = "gatsby build"
-  ignore = ""
+  ignore = "git diff --quiet HEAD^ HEAD gatsby content"
