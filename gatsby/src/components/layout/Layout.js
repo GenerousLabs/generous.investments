@@ -5,6 +5,7 @@ import Fade from '@material-ui/core/Fade';
 import classNames from 'classnames';
 
 import { Header } from 'components';
+import Password from 'components/password/password';
 
 import styles from './style';
 
@@ -23,16 +24,18 @@ const Layout = ({ classes, children, noBackground }: Props) => (
     autoHideDuration={200}
     renderView={props => <div {...props} className={classes.scrollFix} />}
     className={classes.container}>
-    <div
-      className={classNames(
-        classes.pageContainer,
-        !noBackground && classes.background
-      )}>
-      <Header />
-      <Fade in mountOnEnter unmountOnExit>
-        <main className={classes.content}>{children}</main>
-      </Fade>
-    </div>
+    <Password>
+      <div
+        className={classNames(
+          classes.pageContainer,
+          !noBackground && classes.background
+        )}>
+        <Header />
+        <Fade in mountOnEnter unmountOnExit>
+          <main className={classes.content}>{children}</main>
+        </Fade>
+      </div>
+    </Password>
   </Scrollbars>
 );
 

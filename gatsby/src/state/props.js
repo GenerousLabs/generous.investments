@@ -1,13 +1,22 @@
 import { stateProp, actionProp } from './utils';
 
-import { toggleMenu as toggleMenuAction } from './actions';
+import {
+  setPassword as setPasswordAction,
+  toggleMenu as toggleMenuAction,
+} from './actions';
 
-const open = stateProp(state => ({
+export const password = stateProp(state => ({
+  password: state.password,
+}));
+
+export const open = stateProp(state => ({
   open: state.open,
 }));
 
-const toggleMenu = actionProp(dispatch => ({
-  toggleMenu: () => dispatch(toggleMenuAction()),
+export const setPassword = actionProp(dispatch => ({
+  setPassword: password => dispatch(setPasswordAction(password)),
 }));
 
-export { open, toggleMenu };
+export const toggleMenu = actionProp(dispatch => ({
+  toggleMenu: () => dispatch(toggleMenuAction()),
+}));
