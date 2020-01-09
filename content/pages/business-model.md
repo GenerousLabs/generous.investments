@@ -1,6 +1,6 @@
 ---
 title: Business Model
-path: /businessmodel
+path: /business-model
 description: The Generous Labs business model.
 ---
 
