@@ -1,13 +1,24 @@
 import React from 'react';
-import { Typography, Paper } from '@material-ui/core';
-import Red from '@material-ui/core/colors/red';
+import { Typography, Paper, makeStyles } from '@material-ui/core';
+import Grey from '@material-ui/core/colors/grey';
 
 const Callout = ({ children }) => {
+  const classes = useStyles();
+
   return (
-    <Paper style={{ padding: 20, backgroundColor: Red[50] }} elevation={3}>
-      <Typography>{children}</Typography>
+    <Paper className={classes.paper} elevation={3}>
+      <Typography align='center'>{children}</Typography>
     </Paper>
   );
 };
+
+const useStyles = makeStyles(theme => ({
+  paper: {
+    padding: 20,
+    marginTop: 20,
+    marginBottom: 40,
+    backgroundColor: Grey[100],
+  },
+}));
 
 export default Callout;
