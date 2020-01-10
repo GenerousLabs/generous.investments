@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { graphql } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
@@ -7,13 +6,14 @@ import { Typography, Fade } from '@material-ui/core';
 
 import { Layout, SEO, Animated } from 'components';
 
-const DearName = () => {
-  const name = useSelector(({ name }) => name);
-  return (
-    <div>
-      <p>Dear {name}</p>
-    </div>
-  );
+import DearName from 'components/DearName/DearName.component';
+import { Question, Yes, No } from 'components/Question/Question.component';
+
+const components = {
+  DearName,
+  Question,
+  Yes,
+  No,
 };
 
 const PageMdx = props => {
@@ -32,7 +32,7 @@ const PageMdx = props => {
         </Typography>
       </Fade>
       <Typography variant='body1'>
-        <MDXProvider components={{ DearName }}>
+        <MDXProvider components={components}>
           <MDXRenderer>{body}</MDXRenderer>
         </MDXProvider>
       </Typography>
