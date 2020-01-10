@@ -22,8 +22,8 @@ const isCorrectPassword = password =>
 const decodeName = hash => atob(decodeURIComponent(hash));
 const encodeName = name => encodeURIComponent(btoa(name));
 
-window.__setName = () => {
-  window.location.hash = encodeName(window.prompt('Enter a name'));
+global.__setName = () => {
+  global.location.hash = encodeName(global.prompt('Enter a name'));
 };
 
 const Password = ({ children }) => {
@@ -33,8 +33,8 @@ const Password = ({ children }) => {
   const classes = useStyles();
 
   useEffect(() => {
-    if (window.location.hash !== '') {
-      dispatch(setName(decodeName(window.location.hash.substr(1))));
+    if (global.location.hash !== '') {
+      dispatch(setName(decodeName(global.location.hash.substr(1))));
     }
   }, [dispatch]);
 
