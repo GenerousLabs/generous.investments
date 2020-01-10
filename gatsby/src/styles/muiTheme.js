@@ -15,7 +15,7 @@ const muiTheme = createMuiTheme({
   props: {
     MuiTypography: {
       variantMapping: {
-        body1: 'span',
+        body1: 'div',
       },
     },
   },
