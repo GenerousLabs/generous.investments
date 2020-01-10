@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { connectProps, password, setPassword } from 'state';
 
 import config from '../../../config';
-
-const empty = '';
 
 const isCorrect = password =>
   config.sitePasswords.includes(password.toLowerCase());
 
 const Password = ({ password, setPassword, children }) => {
   const classes = useStyles();
-  // const [password, setPassword] = useState(empty);
 
   if (!isCorrect(password)) {
     return (
