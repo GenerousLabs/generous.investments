@@ -7,9 +7,11 @@ import { Typography, Fade } from '@material-ui/core';
 import { Layout, SEO, Animated } from 'components';
 
 import DearName from 'components/DearName/DearName.component';
+import Callout from 'components/Callout/Callout.component';
 import { Question, Yes, No } from 'components/Question/Question.component';
 
 const components = {
+  Callout,
   DearName,
   Question,
   Yes,
