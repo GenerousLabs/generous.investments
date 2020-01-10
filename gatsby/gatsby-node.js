@@ -10,10 +10,12 @@ exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
   }
 };
 
+const extendTypes = ['MarkdownRemark', 'Mdx'];
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (extendTypes.includes(node.internal.type)) {
     const parent = getNode(node.parent);
 
     createNodeField({
@@ -24,10 +26,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   const pageTemplate = path.resolve(`src/templates/page.js`);
+  const pageMdxTemplate = path.resolve(`src/templates/page-mdx.js`);
 
   return graphql(`
     query PagesQuery {
@@ -36,7 +39,16 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             id
             frontmatter {
-              title
+              path
+            }
+          }
+        }
+      }
+      allMdx(filter: { fields: { collection: { eq: "pages" } } }) {
+        edges {
+          node {
+            id
+            frontmatter {
               path
             }
           }
@@ -45,8 +57,21 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     if (result.errors) {
-      throw result.errors;
+      reporter.panicOnBuild(
+        'Failed to load allMarkdownRemark query',
+        result.errors
+      );
     }
+
+    result.data.allMdx.edges.forEach(edge => {
+      createPage({
+        path: edge.node.frontmatter.path,
+        component: pageMdxTemplate,
+        context: {
+          id: edge.node.id,
+        },
+      });
+    });
 
     result.data.allMarkdownRemark.edges.forEach(edge => {
       createPage({
