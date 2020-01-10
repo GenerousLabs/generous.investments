@@ -1,9 +1,20 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { graphql } from 'gatsby';
+import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography, Fade } from '@material-ui/core';
 
 import { Layout, SEO, Animated } from 'components';
+
+const DearName = () => {
+  const name = useSelector(({ name }) => name);
+  return (
+    <div>
+      <p>Dear {name}</p>
+    </div>
+  );
+};
 
 const PageMdx = props => {
   const { data } = props;
@@ -21,7 +32,9 @@ const PageMdx = props => {
         </Typography>
       </Fade>
       <Typography variant='body1'>
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXProvider components={{ DearName }}>
+          <MDXRenderer>{body}</MDXRenderer>
+        </MDXProvider>
       </Typography>
     </Layout>
   );
