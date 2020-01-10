@@ -19,18 +19,20 @@ const components = {
 const PageMdx = props => {
   const { data } = props;
   const {
-    frontmatter: { title, description },
+    frontmatter: { title, description, hideTitle },
     body,
   } = data.mdx;
 
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <Fade in timeout={1000}>
-        <Typography variant='h1' color='textPrimary'>
-          <Animated>{title}</Animated>
-        </Typography>
-      </Fade>
+      {hideTitle ? null : (
+        <Fade in timeout={1000}>
+          <Typography variant='h1' color='textPrimary'>
+            <Animated>{title}</Animated>
+          </Typography>
+        </Fade>
+      )}
       <Typography variant='body1'>
         <MDXProvider components={components}>
           <MDXRenderer>{body}</MDXRenderer>
@@ -48,6 +50,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        hideTitle
       }
     }
   }
