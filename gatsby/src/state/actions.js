@@ -1,6 +1,5 @@
 import { createAction } from 'redux-actions';
 
-const setPassword = createAction('SET_PASSWORD');
-const toggleMenu = createAction('TOGGLE_MENU');
-
-export { setPassword, toggleMenu };
+export const setName = createAction('SET_NAME');
+export const setPassword = createAction('SET_PASSWORD');
+export const toggleMenu = createAction('TOGGLE_MENU');

@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { connectProps, password, setPassword } from 'state';
+import { useSelector, useDispatch } from 'react-redux';
 
 import config from '../../../config';
 
-const isCorrect = password =>
+import { setName, setPassword } from 'state/actions';
+
+const isLocked = ({ name, password }) => {
+  if (name !== config.defaultName) {
+    return false;
+  }
+  if (isCorrectPassword(password)) {
+    return false;
+  }
+  return true;
+};
+
+const isCorrectPassword = password =>
   config.sitePasswords.includes(password.toLowerCase());
 
-const Password = ({ password, setPassword, children }) => {
+const decodeName = hash => atob(decodeURIComponent(hash));
+const encodeName = name => encodeURIComponent(btoa(name));
+
+window.__setName = () => {
+  window.location.hash = encodeName(window.prompt('Enter a name'));
+};
+
+const Password = ({ children }) => {
+  const name = useSelector(({ name }) => name);
+  const password = useSelector(({ password }) => password);
+  const dispatch = useDispatch();
   const classes = useStyles();
 
-  if (!isCorrect(password)) {
+  useEffect(() => {
+    if (window.location.hash !== '') {
+      dispatch(setName(decodeName(window.location.hash.substr(1))));
+    }
+  }, [dispatch]);
+
+  if (isLocked({ name, password })) {
     return (
       <div className={classes.passwordRoot}>
         <p className={classes.passwordP}>
@@ -18,7 +46,7 @@ const Password = ({ password, setPassword, children }) => {
           <input
             type='text'
             onChange={e => {
-              setPassword(e.currentTarget.value);
+              dispatch(setPassword(e.currentTarget.value));
             }}
           />
         </p>
@@ -42,4 +70,4 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default connectProps(password, setPassword)(Password);
+export default Password;
