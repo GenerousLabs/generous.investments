@@ -12,7 +12,7 @@ const filterChildren = (answer, children) => {
   return children.filter(child => child.props.mdxType === seekType);
 };
 
-export const Question = ({ question, children }) => {
+export const Question = ({ children }) => {
   const [answer, setAnswer] = useState(null);
 
   const hasAnswer = typeof answer === 'boolean';
@@ -20,8 +20,7 @@ export const Question = ({ question, children }) => {
   const filteredChildren = filterChildren(answer, children);
 
   return (
-    <div>
-      <p>{question}</p>
+    <div style={{ marginBottom: 600 }}>
       <p>
         <Button
           variant='contained'
