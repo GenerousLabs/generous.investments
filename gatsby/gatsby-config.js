@@ -1,10 +1,10 @@
-const config = require('./config');
-
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-title = `Generous`;
+const config = require('./config');
+
+const { title } = config;
 
 module.exports = {
   siteMetadata: {
@@ -19,6 +19,23 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: config.maxWidth,
+            },
+          },
+          `gatsby-remark-external-links`,
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -106,6 +123,5 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-remove-serviceworker',
-    'gatsby-plugin-mdx',
   ],
 };
