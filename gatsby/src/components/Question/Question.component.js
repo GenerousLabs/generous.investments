@@ -63,6 +63,7 @@ export const Question = ({ children }) => {
 const useStyles = makeStyles(() => ({
   changeYourMind: {
     fontSize: '0.8em',
+    fontWeight: 'normal',
   },
 }));
 
